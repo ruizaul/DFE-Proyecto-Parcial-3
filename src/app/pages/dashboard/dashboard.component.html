@@ -1,0 +1,33 @@
+<div class="flex min-h-screen container my-8 mx-auto">
+  <!-- Contenido del Dashboard -->
+  <div class="flex-1">
+    <div class="bg-stone-500 p-8">
+      <h1 class="text-4xl font-bold mb-6 text-white">
+        Play&Win - Información General
+      </h1>
+
+      <p class="text-gray-200 mb-6 text-2xl font-semibold">
+        Bienvenido al panel de administración de Play&Win. Aquí puedes encontrar
+        información relevante sobre la empresa y sus operaciones.
+      </p>
+
+      <!-- Puedes agregar más widgets o secciones según tus necesidades -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-stone-900 text-white p-4 rounded">
+          <h2 class="text-lg font-bold mb-2">Cantidad de Títulos en Stock</h2>
+          <p class="text-2xl font-bold">{{ totalTitles }}</p>
+        </div>
+        <div class="bg-stone-800 text-white p-4 rounded">
+          <h2 class="text-lg font-bold mb-2">Ventas Totales</h2>
+          <p class="text-2xl font-bold">{{ totalSales }}</p>
+        </div>
+        <div class="bg-stone-600 text-white p-4 rounded col-span-2 lg:col-auto">
+          <h2 class="text-lg font-bold mb-2">Ganancias Totales</h2>
+          <p class="text-2xl font-bold">
+            {{ totalProfits + " USD" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

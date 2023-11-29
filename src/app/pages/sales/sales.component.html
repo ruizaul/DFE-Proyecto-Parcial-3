@@ -1,0 +1,10 @@
+<div class="min-h-screen container mx-auto">
+  <app-search-summary
+    [results]="products"
+    (searchChange)="onSearchChange($event)"
+  ></app-search-summary>
+  <app-products-table [products]="filteredProducts"></app-products-table>
+
+  <!-- Verificar si selectedProduct no es null antes de pasar al componente -->
+  <app-product-form [product]="selectedProduct"></app-product-form>
+</div>

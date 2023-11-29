@@ -1,0 +1,32 @@
+<div class="p-8">
+  <h2 class="text-3xl font-bold mb-4">Visualización de Productos</h2>
+
+  <div class="overflow-x-auto">
+    <table class="table">
+      <!-- head -->
+      <thead
+        class="text-gray-200 font-semibold text-lg bg-stone-500 border border-gray-200/10"
+      >
+        <tr>
+          <th>Producto</th>
+          <th>Unidades Vendidas</th>
+          <th>Costo</th>
+          <th>Ganancias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="hover border border-gray-200/10"
+          *ngFor="let product of products"
+        >
+          <td>{{ product.title }}</td>
+          <td>{{ product.quantitySold }}</td>
+          <td>{{ product.cost + " USD" }}</td>
+          <td>
+            {{ (product.price - product.cost) * product.quantitySold + " USD" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
